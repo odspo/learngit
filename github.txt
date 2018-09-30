@@ -1,0 +1,25 @@
+## 远程仓库
+
+- 放在GitHub上的Git仓库，任何人都可见，但只有自己可修改
+
+### 第一步：创建SSH Key
+
+查看用户主目录下有没有.ssh文件。如果没有：
+
+$ ssh-keygen -t rsa -C "email@example.com"
+
+然后一路回车
+
+- id_rsa是私钥，不能泄露；id_rsa.pub是公钥，可以告诉任何人
+
+### 第二步
+
+登录GitHub，打开Account settings ，SSH keys界面
+
+点Add SSH Key，填上任意Title，在Key文本框里粘贴id_rsa.pub的内容
+
+## 添加远程库
+
+- 使用git remote add origin git@odspo:pr-name.git
+- 使用git push -u origin master 第一次推送master 分支的所有内容
+- 之后的每次提交，可用git push origin master推送最新修改
