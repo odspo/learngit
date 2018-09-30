@@ -7,3 +7,6 @@
 - 合并某分支到当前分支 git merge \<name>
 - 删除分支：git branch -d <name\>
 
+## 解决冲突
+
+当Git无法自动合并分支时，必须手动解决冲突。
